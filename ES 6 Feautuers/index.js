@@ -4,7 +4,7 @@
 
 // Destructuring is a javascript experession that make it possible to unpack value from arrays, or properties from object, into distinct variable. that is we can extract data from arrays and object and assign them to variables.
 
-const number = [10,20,30]
+// const number = [10,20,30]
 // const first = number[0] // traditional way
 
 
@@ -26,19 +26,19 @@ const number = [10,20,30]
 
 //* Desturucting objects
 
-const user = {
-    name: "ali",
-    age: 30
-}
+// const user = {
+//     name: "ali",
+//     age: 30
+// }
 
-const {name,age}  = user;
-console.log(`my name is ${name} and my age is ${age}`)
+// const {name,age}  = user;
+// console.log(`my name is ${name} and my age is ${age}`)
 
 //&%**  Spread operators
 
 // copying array
 
-let arr  = [1,2,3,4]
+// let arr  = [1,2,3,4]
 // let newarr = [...arr]
 // console.log(newarr)
 
@@ -57,9 +57,27 @@ let arr  = [1,2,3,4]
 
 
 // traditional way
-const country = "pakistan"
+// const country = "pakistan"
 // console.log(country.split(""))
 
 // new way to doing it
 
-console.log([...country])
+// console.log([...country])
+
+
+// traditional way
+
+
+const sums =(a,b,c,d,e ) =>{
+    return a+b+c+d+e;
+
+}
+
+console.log(sums(1,2,3,4,5))
+// Rest parametors
+// unique way
+const sum = (...numbers) =>{
+
+return numbers.reduce((accum,curVal)=> (accum = accum + curVal))}
+
+console.log(sum(1,2,3,4,5))
