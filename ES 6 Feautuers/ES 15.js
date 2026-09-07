@@ -78,6 +78,7 @@ console.log(sums(1,2,3,4,5))
 // unique way
 const sum = (...numbers) =>{
 
+    console.log(typeof numbers)
 return numbers.reduce((accum,curVal)=> (accum = accum + curVal))}
 
 console.log(sum(1,2,3,4,5))
