@@ -20,7 +20,28 @@
 // const newObj = {...obj1 , ...obj2}
 // console.log(newObj)
 
-let arr = [9,10,44,2,56,123,111,105]
-// arr.sort((a,b)=> a-b);
-arr.sort((a,b)=> b-a);
-console.log(arr)
+// arrange in decending order 
+// let arr = [9,10,44,2,56,123,111,105]
+// // arr.sort((a,b)=> a-b);
+// arr.sort((a,b)=> b-a);
+// console.log(arr)
+
+
+// optional chaining operators
+
+const person = {
+    name: "umar",
+    age: 49,
+    address:{
+        city: 0,
+        zipCode: 958393
+    }
+}
+
+// accessign nested property without optional chaining
+// let city = person.address ? person.address.gcity : "City is not found"
+// console.log(city)
+
+// with optional chaining (?.)
+let city = person.address?.city ?? "City is not found"
+console.log(city)
