@@ -45,3 +45,16 @@ const person = {
 // with optional chaining (?.)
 let city = person.address?.city ?? "City is not found"
 console.log(city)
+
+
+// replacing mutliple spaces with single space.
+
+const text = "this     is     how     you     red"
+
+const normaLizeText = text.replaceAll(/\s+/g, " ")
+console.log(normaLizeText)
+
+// the at() method introduce in 2022 his simplified this process. in a case of positive indexing .at() will work the same as the square brackets. but for negative indexing the at() method allows starting the iteration from the end.
+
+let arr = [1,2,3,4,5,6,]
+console.log(arr.at(-2)) // 6

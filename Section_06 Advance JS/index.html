@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propagations</title>
+    <style>
+        body{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: antiquewhite;
+            padding: 50px;
+            
+        }
+        button{
+            padding: 20px 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <div class="buttons">
+    <button class="btn1">one</button>
+    <button class="btn2">two</button>
+    <button class="btn3">three</button>
+    <button class="btn4">four</button>
+    <button class="btn5">five</button>
+   </div>
+
+
+   <script src="index.js"></script>
+</body>
+</html>
