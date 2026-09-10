@@ -10,9 +10,9 @@
 <body>
 <div class="container">
     
-    <button id="apiBtn">Get Another API</button>
     <P class="APIjoke"></P>
     <p class="api"></p>
+    <button id="apiBtn">Get Another API</button>
 </div>
 
 <script>
@@ -26,13 +26,16 @@ const getApi = () =>{
  }).then((val)=>{
     return val.json()
  }).then((data)=>{
-    console.log(data[0].joke)
+    // console.log(data[0].joke)
     APIjoke.textContent = data[0].joke
  }).catch((err)=>{
+    APIjoke.textContent = `failed to loaded API`
+
     console.log(err)
+
  })
 }
-
+getApi()
 let APIjoke = document.querySelector(".APIjoke")
     document.getElementById("apiBtn").addEventListener("click", getApi)
 </script>

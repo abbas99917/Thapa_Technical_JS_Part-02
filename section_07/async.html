@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="fetchApi">Get another API</button>
+    <p class="joke"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+      let apiUrl = "https://api.api-ninjas.com/v1/dadjokes"
+      async function fetchData() {
+        
+        try{
+            const res = await fetch(apiUrl, {
+                headers:{
+                    "X-Api-Key": "3DtaOQ5BkW52civUtY7hwXUCg5qevbDSjyJJkxmM"
+                }
+            });
+            const data = await res.json()
+            console.log(data[0].joke)
+            joke.innerHTML = data[0].joke;
+
+        }catch(error){
+            joke.innerHTML = error;
+            console.log(error)
+        }
+      }
+      fetchData()
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let joke = document.querySelector(".joke")
+     let api = document.getElementById("fetchApi")
+        api.addEventListener("click", fetchData)
+    </script>
+</body>
+</html>
