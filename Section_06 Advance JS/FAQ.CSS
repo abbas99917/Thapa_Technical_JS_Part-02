@@ -57,8 +57,17 @@ body {
   padding: 0 20px 20px;
   color: #555;
   line-height: 1.6;
-transition: 0.3s;
+   transition: max-height 0.3s ease;
 }
 .faq-answer.show {
     display: block;
+    max-height: 200px;
+}
+
+.faq-question span {
+  transition: transform 0.1s ease;
+}
+
+.faq-question.active span {
+  transform: rotate(45deg);
 }
