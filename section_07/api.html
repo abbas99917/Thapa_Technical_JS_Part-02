@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes API</title>
+    <link rel="stylesheet" href="api.css">
+</head>
+
+<body>
+<div class="container">
+    
+    <button id="apiBtn">Get Another API</button>
+    <P class="APIjoke"></P>
+    <p class="api"></p>
+</div>
+
+<script>
+
+    let api  = "https://api.api-ninjas.com/v1/dadjokes"
+const getApi = () =>{
+ fetch(api,{
+    headers: {
+        "X-Api-Key": "3DtaOQ5BkW52civUtY7hwXUCg5qevbDSjyJJkxmM"
+    }
+ }).then((val)=>{
+    return val.json()
+ }).then((data)=>{
+    console.log(data[0].joke)
+    APIjoke.textContent = data[0].joke
+ }).catch((err)=>{
+    console.log(err)
+ })
+}
+
+let APIjoke = document.querySelector(".APIjoke")
+    document.getElementById("apiBtn").addEventListener("click", getApi)
+</script>
+
+</body>
+</html>
